@@ -208,4 +208,4 @@ Educational use for MAD 2 course. All rights reserved.
 
 ---
 
-**🎉 Ready to experience the future of quiz platforms? Start with the quick setup guide above!** 
+**🎉 Ready to experience the future of quiz platforms? Start with the quick setup guide above!**
