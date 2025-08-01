@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Quiz Reminder - Quiz Master V2</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .header .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #1E3A8A;
+        }
+        .message {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        .quiz-card {
+            background: #f8f9fa;
+            border-left: 4px solid #3B82F6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .quiz-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1E3A8A;
+            margin-bottom: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3B82F6 0%, #1E3A8A 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #3B82F6;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #6b7280;
+            text-transform: uppercase;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        .emoji {
+            font-size: 20px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon">🎓</div>
+            <h1>Quiz Master V2</h1>
+            <p>Daily Learning Reminder</p>
+        </div>
+        
+        <div class="content">
+            <div class="greeting">
+                Hi {{ username }}! 👋
+            </div>
+            
+            <div class="message">
+                <p>We noticed you haven't attempted any quiz today. Don't let your learning streak break!</p>
+                
+                <div class="quiz-card">
+                    <div class="quiz-title">
+                        <span class="emoji">🚀</span>{{ quiz_title }}
+                    </div>
+                    <p>A new exciting quiz is waiting for you. Test your knowledge and challenge yourself!</p>
+                </div>
+                
+                <p>Remember, consistent practice is the key to mastering any subject. Even 5 minutes of learning today can make a difference!</p>
+            </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">📚</div>
+                    <div class="stat-label">New Quiz</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">⏰</div>
+                    <div class="stat-label">5 Min</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">🏆</div>
+                    <div class="stat-label">Earn Points</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="http://localhost:3000/quiz/{{ quiz_id }}" class="cta-button">
+                    🎯 Take Quiz Now
+                </a>
+            </div>
+            
+            <div class="message">
+                <p><strong>Why take this quiz?</strong></p>
+                <ul>
+                    <li>🧠 Strengthen your knowledge retention</li>
+                    <li>📈 Track your learning progress</li>
+                    <li>🏅 Compete with other learners</li>
+                    <li>⭐ Unlock new achievements</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Keep learning, keep growing! 🌱</p>
+            <p>Best regards,<br>Quiz Master V2 Team</p>
+            <p style="margin-top: 20px; font-size: 12px;">
+                You're receiving this because you're an active learner on Quiz Master V2.<br>
+                <a href="#" style="color: #3B82F6;">Manage notification preferences</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

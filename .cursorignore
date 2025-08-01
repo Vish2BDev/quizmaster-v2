@@ -1,0 +1,22 @@
+# Cursor AI ignore file
+# Files and directories to be ignored by Cursor AI
+
+# Ignore sensitive files
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+credentials.json
+
+# Keep .env files accessible to AI (remove this line if you want to ignore them)
+# .env
+# backend/.env
+
+# Ignore other sensitive directories
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/ 
